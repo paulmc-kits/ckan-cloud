@@ -13,14 +13,14 @@ steps:
   args:
   - 'build'
   - '-t'
-  - 'europe-west2-docker.pkg.dev/fleet-coyote-341511/test-build-repo/ckanext-dftnap-cloudbuild:5'
+  - 'europe-west2-docker.pkg.dev/fleet-coyote-341511/test-build-repo/ckanext-dftnap-cloudbuild:iSHORT_SHA'
   - '.'
 
 # This step pushes the image to Artifact Registry
 # The PROJECT_ID and SHORT_SHA variables are automatically
 # replaced by Cloud Build.
-#- name: 'gcr.io/cloud-builders/docker'
-#  id: Push
-#  args:
-#  - 'push'
-#  - 'europe-west2-docker.pkg.dev/fleet-coyote-341511/test-build-repo/ckanext-dftnap-cloudbuild:$SHORT_SHA'
+- name: 'gcr.io/cloud-builders/docker'
+  id: Push
+  args:
+  - 'push'
+  - 'europe-west2-docker.pkg.dev/fleet-coyote-341511/test-build-repo/ckanext-dftnap-cloudbuild:$SHORT_SHA'
