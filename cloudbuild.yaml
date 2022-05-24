@@ -13,7 +13,7 @@ steps:
   args:
   - 'build'
   - '-t'
-  - 'europe-west2-docker.pkg.dev/fleet-coyote-341511/test-build-repo/ckanext-dftnap-cloudbuild:$SHORT_SHA'
+  - 'europe-west2-docker.pkg.dev/fleet-coyote-341511/test-build-repo/ckanext-dftnap-cloudbuild:5'
   - '.'
 
 # This step pushes the image to Artifact Registry
